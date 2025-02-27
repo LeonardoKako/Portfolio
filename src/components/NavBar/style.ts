@@ -7,7 +7,7 @@ export const Nav = styled.nav`
   padding: 32px;
   min-height: 80px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 
   .active {
@@ -47,4 +47,5 @@ export const Language = styled.h1`
   font-size: 22px;
   font-weight: bold;
   font-family: "Consolas", sans-serif;
+  cursor: pointer;
 `;

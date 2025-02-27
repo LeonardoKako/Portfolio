@@ -3,33 +3,42 @@ import { Tag, Tags, Title } from "../../style";
 
 import { useParams } from "react-router-dom";
 import { projectsList } from "../../api/projectsList";
+import { useContext } from "react";
+import { SetLanguage } from "../../context/SetLanguage";
 
 const ProjectSolo = () => {
+  const context = useContext(SetLanguage);
   const { id } = useParams();
   const projectIndex = Number(id);
   const project = projectsList[projectIndex];
 
-  // Evita erro caso o ID seja inválido
   if (isNaN(projectIndex) || !project) {
     return <p>Projeto não encontrado</p>;
   }
+  if (!context) {
+    throw new Error(
+      "useSetLanguage deve ser usado dentro de um SetLanguageProvider"
+    );
+  }
+  const { english } = context;
+
   return (
     <ProjectSoloPage>
-      <Img img={project.img} />
+      <Img src={project.img} alt={project.name} />
       <Card>
-        <Title>{project.name}</Title>
+        <Title>{english ? project.nameEng : project.nameEng}</Title>
         <Tags>
           {project.tags?.map((i) => (
             <Tag key={i.tagName}>
               <img src={i.imgTag} alt={i.tagName} />
-              <p>Icon</p>
+              <p>{i.tagName}</p>
             </Tag>
           ))}
         </Tags>
-        <p>{project.desc}</p>
+        <p>{english ? project.descEng : project.desc}</p>
         <Buttons>
           <Button target="e_blank" to={project.site}>
-            Site
+            Deploy
           </Button>
           <Button target="e_blank" to={project.github}>
             Github

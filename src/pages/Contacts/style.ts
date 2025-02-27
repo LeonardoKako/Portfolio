@@ -9,16 +9,16 @@ export const ContactsPage = styled.section`
     padding: 2.5vw;
     border-radius: 15px;
     box-shadow: 0 0 0 0.2px ${colors.white};
+    > p {
+      font-size: 20px;
+      color: ${colors.gray};
+      margin-bottom: 30px;
+    }
   }
 
   ${Title} {
-    font-size: 50px;
+    font-size: 40px;
     margin-bottom: 5px;
-  }
-
-  > p {
-    font-size: 18px;
-    color: ${colors.gray};
   }
 
   ul {

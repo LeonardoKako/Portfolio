@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.section`
   width: 100%;
   margin-top: 80px;
+  margin-bottom: 80px;
   overflow: hidden;
   white-space: nowrap;
   position: relative;

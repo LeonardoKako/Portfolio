@@ -2,10 +2,6 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { colors } from "../../style";
 
-type Props = {
-  img: string;
-};
-
 export const ProjectSoloPage = styled.section`
   width: 100%;
   padding: 80px 10vw;
@@ -16,14 +12,9 @@ export const ProjectSoloPage = styled.section`
   gap: 60px;
 `;
 
-export const Img = styled.div<Props>`
+export const Img = styled.img`
   width: 100%;
-  height: 90vh;
   border-radius: 25px;
-  background-image: ${({ img }) => `url(${img})`};
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 `;
 
 export const Card = styled.div`

@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { SetLanguage } from "../../context/SetLanguage";
 import IconAbility from "../../components/IconAbility";
 import { Title } from "../../style";
 import { AbilitiesPage } from "./style";
@@ -24,9 +26,16 @@ import sass from "../../assets/images/icons/sass.svg";
 import vue from "../../assets/images/icons/vue.svg";
 
 const Abilities = () => {
+  const context = useContext(SetLanguage);
+  if (!context) {
+    throw new Error(
+      "useSetLanguage deve ser usado dentro de um SetLanguageProvider"
+    );
+  }
+  const { english } = context;
   return (
     <AbilitiesPage>
-      <Title>Habilidades</Title>
+      {english ? <Title>Skills</Title> : <Title>Habilidades</Title>}
       <div>
         <IconAbility name="HTML" icon={html} />
         <IconAbility name="CSS" icon={css} />
@@ -38,7 +47,7 @@ const Abilities = () => {
         <IconAbility name="Tailwind CSS" icon={tailwind} />
         <IconAbility name="VUE" icon={vue} />
         <IconAbility name="Next.js" icon={next} />
-        <IconAbility name="SASS" icon={sass} />
+        <IconAbility name="Sass" icon={sass} />
         <IconAbility name="Gulp" icon={gulp} />
         <IconAbility name="Git" icon={git} />
         <IconAbility name="Vite" icon={vite} />

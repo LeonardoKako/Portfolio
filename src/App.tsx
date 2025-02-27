@@ -9,21 +9,6 @@ import Abilities from "./pages/Abilities";
 import Contacs from "./pages/Contacts";
 import ProjectSolo from "./pages/ProjectSolo";
 
-type TagType = {
-  name: string;
-  img: string;
-};
-
-export type ProjectProps = {
-  name: string;
-  img: string;
-  desc?: string;
-  tags?: TagType[];
-  id?: string;
-  link1?: string;
-  link2?: string;
-};
-
 function App() {
   return (
     <>
@@ -36,7 +21,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/abilities" element={<Abilities />} />
           <Route path="/contact" element={<Contacs />} />
-          <Route path="/projects/:id" element={<ProjectSolo name="" />} />
+          <Route path="/projects/:id" element={<ProjectSolo />} />
         </Routes>
         <Footer />
       </BrowserRouter>
