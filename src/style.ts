@@ -74,11 +74,14 @@ export const LinkItem = styled(Link)`
 
 export const Tags = styled.ul`
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: start;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   gap: 15px;
   margin-bottom: 10px;
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 `;
 
 export const Tag = styled.li`
@@ -95,7 +98,16 @@ export const Tag = styled.li`
   }
 
   img {
-    width: 100%;
-    max-width: 30px;
+    width: 30px;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    padding: 8px;
+    gap: 8px;
+    p {
+      font-size: 16px;
+    }
+    img {
+      max-width: 20px;
+    }
   }
 `;

@@ -15,10 +15,14 @@ export const Card = styled.div<Props>`
   align-items: start;
   position: relative;
   box-shadow: 0 0 0 0.2px ${colors.white};
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: gray;
   overflow: hidden;
   cursor: pointer;
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    height: 45vh;
+  }
 
   &::before {
     content: "";

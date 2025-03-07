@@ -42,9 +42,9 @@ const Abilities = () => {
         <IconAbility name="JavaScript" icon={js} />
         <IconAbility name="TypeScript" icon={ts} />
         <IconAbility name="React.js" icon={react} />
-        <IconAbility name="Styled-components" icon={styled} />
+        <IconAbility name="StyledComp" icon={styled} />
         <IconAbility name="Redux" icon={redux} />
-        <IconAbility name="Tailwind CSS" icon={tailwind} />
+        <IconAbility name="Tailwind" icon={tailwind} />
         <IconAbility name="VUE" icon={vue} />
         <IconAbility name="Next.js" icon={next} />
         <IconAbility name="Sass" icon={sass} />
@@ -52,8 +52,8 @@ const Abilities = () => {
         <IconAbility name="Git" icon={git} />
         <IconAbility name="Vite" icon={vite} />
         <IconAbility name="Bootstrap" icon={bootstrap} />
-        <IconAbility name="API" icon={api} />
         <IconAbility name="Figma" icon={figma} />
+        <IconAbility name="API" icon={api} />
         <IconAbility name="Firebase" icon={firebase} />
         <IconAbility name="MongoDB" icon={mongodb} />
         <IconAbility name="Node.js" icon={node} />

@@ -23,6 +23,8 @@ export const Nav = styled.nav`
 `;
 
 export const Name = styled(NavLink)`
+  width: 200px;
+  text-align: center;
   font-size: 22px;
   font-family: "ConsB", sans-serif;
   color: ${colors.white};
@@ -43,7 +45,21 @@ export const Navlink = styled(NavLink)`
   }
 `;
 
+export const DownloadLink = styled.a`
+  font-size: 20px;
+  font-family: "Consolas", sans-serif;
+  color: ${colors.white};
+  transition: text-shadow 0.25s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    text-shadow: 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff;
+  }
+`;
+
 export const Language = styled.h1`
+  width: 200px;
+  text-align: center;
   font-size: 22px;
   font-weight: bold;
   font-family: "Consolas", sans-serif;

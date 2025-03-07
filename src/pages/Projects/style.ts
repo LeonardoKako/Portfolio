@@ -6,6 +6,10 @@ export const ProjectsPage = styled.section`
   min-height: 100vh;
   padding: 80px 20vw;
 
+  @media (min-width: 768px) and (max-width: 1024px) {
+    padding: 80px 10vw;
+  }
+
   ${Title} {
     font-size: 40px;
 
