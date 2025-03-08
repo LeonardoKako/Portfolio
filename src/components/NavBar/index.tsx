@@ -37,7 +37,7 @@ const NavBar = () => {
   return (
     <Nav>
       <Name to="/">Leonardo Fleith</Name>
-      <div>
+      <ul>
         <Navlink to="/about">{translations.about[lang]}</Navlink>
         <Navlink to="/projects">{translations.projects[lang]}</Navlink>
         <Navlink to="/abilities">{translations.abilities[lang]}</Navlink>
@@ -45,7 +45,7 @@ const NavBar = () => {
         <DownloadLink onClick={downloadPDF}>
           {translations.education[lang]}
         </DownloadLink>
-      </div>
+      </ul>
       <Language onClick={() => setEnglish(!english)}>
         {translations.language[lang]}
       </Language>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Title } from "../../../style";
 
 export const Container = styled.section`
   width: 100%;
@@ -7,6 +8,12 @@ export const Container = styled.section`
   overflow: hidden;
   white-space: nowrap;
   position: relative;
+
+  ${Title} {
+    @media (max-width: 768px) {
+      max-width: 80px;
+    }
+  }
 
   > div {
     margin-top: 40px;
@@ -42,6 +49,10 @@ export const ListItem = styled.ul`
   width: max-content;
   gap: 2vw;
 
+  @media (max-width: 768px) {
+    margin-top: 0px;
+  }
+
   &:first-child {
     animation: slideLeft 30s linear infinite;
     margin-bottom: 40px;
@@ -52,7 +63,7 @@ export const ListItem = styled.ul`
   }
 
   &:hover {
-    animation-play-state: paused; /* 🔥 Para a animação no hover */
+    animation-play-state: paused;
   }
 
   @keyframes slideLeft {

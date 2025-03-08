@@ -1,9 +1,9 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Title } from "../../style";
-import { ContactsPage } from "./style";
+import { ContactsPage, CustomAlert } from "./style";
 import { SetLanguage } from "../../context/SetLanguage";
 
-import git from "../../assets/images/contacts/github.svg";
+import mail from "../../assets/images/contacts/mail.svg";
 import wpp from "../../assets/images/contacts/phone.svg";
 import linkedin from "../../assets/images/contacts/linkedin.svg";
 
@@ -16,9 +16,11 @@ const translations = {
   email: { pt: "E-mail", en: "Email" },
   whatsapp: { pt: "Whatsapp", en: "Whatsapp" },
   linkedin: { pt: "Linkedin", en: "LinkedIn" },
+  alert: { pt: "Email copiado!", en: "Email copied! " },
 };
 
 const Contacts = () => {
+  const [alertVisible, setAlertVisible] = useState(false);
   const context = useContext(SetLanguage);
   if (!context) {
     throw new Error(
@@ -28,29 +30,52 @@ const Contacts = () => {
   const { english } = context;
   const lang = english ? "en" : "pt";
 
+  const copyText = (text: string) => {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => setAlertVisible(true))
+      .catch((err) => console.error("Erro ao copiar texto: ", err));
+    setTimeout(() => setAlertVisible(false), 3000);
+  };
+
   return (
     <ContactsPage>
       <div>
         <Title>{translations.title[lang]}</Title>
         <p>{translations.description[lang]}</p>
         <ul>
-          <li>
-            <img src={git} alt="GitHub Icon" />
+          <li onClick={() => copyText("fleithkako@gmail.com")}>
+            <img src={mail} alt="E-mail Icon" />
             <h3>{translations.email[lang]}</h3>
             <p>fleithkako@gmail.com</p>
           </li>
-          <li>
+          <li
+            onClick={() =>
+              window.open(
+                "https://api.whatsapp.com/send/?phone=%2B5548988352502&text&type=phone_number&app_absent=0",
+                "_blank"
+              )
+            }
+          >
             <img src={wpp} alt="WhatsApp Icon" />
             <h3>{translations.whatsapp[lang]}</h3>
             <p>+55 (48) 98835-2502</p>
           </li>
-          <li>
+          <li
+            onClick={() =>
+              window.open(
+                "https://www.linkedin.com/in/leonardo-jo%C3%A3o-fleith/",
+                "_blank"
+              )
+            }
+          >
             <img src={linkedin} alt="LinkedIn Icon" />
             <h3>{translations.linkedin[lang]}</h3>
             <p>Leonardo Fleith</p>
           </li>
         </ul>
       </div>
+      {alertVisible && <CustomAlert>{translations.alert[lang]}</CustomAlert>}
     </ContactsPage>
   );
 };

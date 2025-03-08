@@ -8,4 +8,8 @@ export const HomePage = styled.section`
   @media (min-width: 768px) and (max-width: 1024px) {
     padding: 80px 10vw;
   }
+
+  @media (max-width: 768px) {
+    padding: 80px 8vw;
+  }
 `;

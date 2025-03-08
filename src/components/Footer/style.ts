@@ -9,10 +9,16 @@ export const Container = styled.footer`
   gap: 10px;
   padding: 3vw;
   box-shadow: 0 0 0 0.2px ${colors.white};
-
+  @media (max-width: 768px) {
+    padding: 6vw;
+  }
   p {
     text-align: center;
     font-size: 18px;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
 
     span {
       color: ${colors.blue};

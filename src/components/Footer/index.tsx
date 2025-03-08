@@ -27,7 +27,15 @@ const Footer = () => {
     <Container>
       <p>{translations.copyright[lang]}</p>
       <p>
-        {translations.github[lang]} <span>Github</span>.
+        {translations.github[lang]}
+        <span
+          onClick={() =>
+            window.open("https://github.com/LeonardoKako", "_blank")
+          }
+        >
+          Github
+        </span>
+        .
       </p>
     </Container>
   );

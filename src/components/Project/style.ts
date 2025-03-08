@@ -24,6 +24,11 @@ export const Card = styled.div<Props>`
     height: 45vh;
   }
 
+  @media (max-width: 768px) {
+    height: 30vh;
+    padding: 16px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -59,7 +64,10 @@ export const Div = styled.div`
   transition: transform 0.3s ease-in-out;
   z-index: 3;
   ${Card}:hover & {
-    transform: translate(0%, -30%); /* Sobe suavemente */
+    transform: translate(0%, -30%);
+    @media (max-width: 1024px) {
+      transform: translate(0%, -10%);
+    }
   }
 `;
 
@@ -120,5 +128,8 @@ export const Button = styled.button`
   img {
     width: 100%;
     max-width: 20px;
+  }
+  @media (max-width: 1024px) {
+    display: none;
   }
 `;

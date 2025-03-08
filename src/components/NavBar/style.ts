@@ -10,15 +10,22 @@ export const Nav = styled.nav`
   justify-content: space-around;
   align-items: center;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
   .active {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
   }
 
-  div {
+  ul {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 25px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 `;
 

@@ -59,6 +59,10 @@ export const Title = styled.h1`
   font-size: 36px;
   font-weight: bold;
   letter-spacing: 1.2px;
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
 `;
 
 export const LinkItem = styled(Link)`
@@ -82,6 +86,10 @@ export const Tags = styled.ul`
   @media (min-width: 768px) and (max-width: 1024px) {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;
 
 export const Tag = styled.li`
@@ -100,7 +108,7 @@ export const Tag = styled.li`
   img {
     width: 30px;
   }
-  @media (min-width: 768px) and (max-width: 1024px) {
+  @media (max-width: 1024px) {
     padding: 8px;
     gap: 8px;
     p {
