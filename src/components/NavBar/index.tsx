@@ -61,7 +61,11 @@ const NavBar = () => {
 
   return (
     <Nav className={isOpen ? "fixed" : ""}>
-      <NameMobile to="/" className="mobile-name">
+      <NameMobile
+        onClick={() => setIsOpen(false)}
+        to="/"
+        className="mobile-name"
+      >
         Leonardo
         <br />
         Fleith
@@ -91,11 +95,24 @@ const NavBar = () => {
       </Language>
       {isOpen && (
         <NavMobile isOpen={isOpen}>
-          <Navlinks to="/about">{translations.about[lang]}</Navlinks>
-          <Navlinks to="/projects">{translations.projects[lang]}</Navlinks>
-          <Navlinks to="/abilities">{translations.abilities[lang]}</Navlinks>
-          <Navlinks to="/contact">{translations.contact[lang]}</Navlinks>
-          <DownloadLink onClick={downloadPDF}>
+          <Navlinks onClick={() => setIsOpen(false)} to="/about">
+            {translations.about[lang]}
+          </Navlinks>
+          <Navlinks onClick={() => setIsOpen(false)} to="/projects">
+            {translations.projects[lang]}
+          </Navlinks>
+          <Navlinks onClick={() => setIsOpen(false)} to="/abilities">
+            {translations.abilities[lang]}
+          </Navlinks>
+          <Navlinks onClick={() => setIsOpen(false)} to="/contact">
+            {translations.contact[lang]}
+          </Navlinks>
+          <DownloadLink
+            onClick={() => {
+              downloadPDF;
+              setIsOpen(false);
+            }}
+          >
             {translations.education[lang]}
           </DownloadLink>
         </NavMobile>
