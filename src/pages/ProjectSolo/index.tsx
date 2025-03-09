@@ -1,5 +1,5 @@
 import { Button, Buttons, Card, Img, ProjectSoloPage } from "./style";
-import { Tag, Tags, Title } from "../../style";
+import { Tag, TagsProjectSolo, Title } from "../../style";
 
 import { useParams } from "react-router-dom";
 import { projectsList } from "../../api/projectsList";
@@ -27,14 +27,14 @@ const ProjectSolo = () => {
       <Img src={project.img} alt={project.name} />
       <Card>
         <Title>{english ? project.nameEng : project.nameEng}</Title>
-        <Tags>
+        <TagsProjectSolo>
           {project.tags?.map((i) => (
             <Tag key={i.tagName}>
               <img src={i.imgTag} alt={i.tagName} />
               <p>{i.tagName}</p>
             </Tag>
           ))}
-        </Tags>
+        </TagsProjectSolo>
         <p>{english ? project.descEng : project.desc}</p>
         <Buttons>
           <Button target="e_blank" to={project.site}>

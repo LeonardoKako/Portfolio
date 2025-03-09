@@ -28,6 +28,10 @@ export const Container = styled.section`
       height: 100%;
       pointer-events: none;
       z-index: 1;
+
+      @media (max-width: 768px) {
+        width: 45%;
+      }
     }
 
     &::before {

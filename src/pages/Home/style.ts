@@ -10,6 +10,6 @@ export const HomePage = styled.section`
   }
 
   @media (max-width: 768px) {
-    padding: 80px 8vw;
+    padding: 40px 8vw;
   }
 `;

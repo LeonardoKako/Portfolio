@@ -24,18 +24,33 @@ const HeaderHome = () => {
       </div>
       <Desc>
         {english
-          ? "Front-end Developer in training at EBAC – British School of Creative Arts and Technology, pursuing a degree in Systems Analysis and Development at Cesusc. A professional with a proactive profile."
-          : "Desenvolvedor Front-end em formação pela EBAC – Escola Britânica de Artes Criativas e Tecnologia, graduando em Análise e Desenvolvimento de Sistemas no Cesusc. Profissional com perfil proativo."}
+          ? "Front-End Developer for 4 years, aspiring Full Stack. A proactive professional always seeking new challenges."
+          : "Desenvolvedor Front-End há 4 anos, aspirante a Full Stack. Profissional com perfil proativo e sempre em busca de novos desafios."}
       </Desc>
 
       <Tags>
-        <div>
+        <div
+          onClick={() =>
+            window.open(
+              "https://www.linkedin.com/in/leonardo-jo%C3%A3o-fleith/",
+              "_blank"
+            )
+          }
+        >
           <img src={linkedin} alt="Linkedin" />
         </div>
-        <div>
+        <div
+          onClick={() =>
+            window.open("https://github.com/LeonardoKako", "_blank")
+          }
+        >
           <img src={github} alt="Github" />
         </div>
-        <div>
+        <div
+          onClick={() =>
+            window.open("https://www.instagram.com/kako.fleith/", "_blank")
+          }
+        >
           <img src={instagram} alt="Instagram" />
         </div>
       </Tags>

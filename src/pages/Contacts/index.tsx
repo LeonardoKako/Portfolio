@@ -52,18 +52,6 @@ const Contacts = () => {
           <li
             onClick={() =>
               window.open(
-                "https://api.whatsapp.com/send/?phone=%2B5548988352502&text&type=phone_number&app_absent=0",
-                "_blank"
-              )
-            }
-          >
-            <img src={wpp} alt="WhatsApp Icon" />
-            <h3>{translations.whatsapp[lang]}</h3>
-            <p>+55 (48) 98835-2502</p>
-          </li>
-          <li
-            onClick={() =>
-              window.open(
                 "https://www.linkedin.com/in/leonardo-jo%C3%A3o-fleith/",
                 "_blank"
               )
@@ -72,6 +60,18 @@ const Contacts = () => {
             <img src={linkedin} alt="LinkedIn Icon" />
             <h3>{translations.linkedin[lang]}</h3>
             <p>Leonardo Fleith</p>
+          </li>
+          <li
+            onClick={() =>
+              window.open(
+                "https://api.whatsapp.com/send/?phone=%2B5548988352502&text&type=phone_number&app_absent=0",
+                "_blank"
+              )
+            }
+          >
+            <img src={wpp} alt="WhatsApp Icon" />
+            <h3>{translations.whatsapp[lang]}</h3>
+            <p>+55 (48) 98835-2502</p>
           </li>
         </ul>
       </div>

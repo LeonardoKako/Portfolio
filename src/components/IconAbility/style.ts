@@ -14,10 +14,17 @@ export const Card = styled.div`
   align-items: center;
   transition: transform 0.3s ease;
 
-  @media (min-width: 768px) and (max-width: 1024px) {
+  @media (min-width: 769px) and (max-width: 1024px) {
     width: 15vw;
     height: 15vw;
     padding: 1.5vw;
+  }
+
+  @media (max-width: 768px) {
+    width: 22vw;
+    height: 22vw;
+    justify-content: center;
+    gap: 1vw;
   }
 
   p {
@@ -25,15 +32,22 @@ export const Card = styled.div`
     font-size: 20px;
     font-family: "Consolas", sans-serif;
 
-    @media (min-width: 768px) and (max-width: 1024px) {
+    @media (min-width: 769px) and (max-width: 1024px) {
       font-size: 18px;
+    }
+    @media (max-width: 768px) {
+      font-size: 16px;
     }
   }
 
   img {
     width: 5.5vw;
-    @media (min-width: 768px) and (max-width: 1024px) {
+    @media (min-width: 769px) and (max-width: 1024px) {
       width: 8vw;
+    }
+
+    @media (max-width: 768px) {
+      width: 10vw;
     }
   }
 

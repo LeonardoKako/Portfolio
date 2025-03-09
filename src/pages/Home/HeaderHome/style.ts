@@ -14,6 +14,13 @@ export const Header = styled.div`
 
     ${Title} {
       width: 30px;
+
+      @media (max-width: 400px) {
+        font-size: 28px;
+      }
+      @media (max-width: 350px) {
+        font-size: 26px;
+      }
     }
   }
 

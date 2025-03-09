@@ -10,6 +10,9 @@ export const ProjectSoloPage = styled.section`
   align-items: center;
   justify-content: space-between;
   gap: 60px;
+  @media (max-width: 768px) {
+    padding: 40px 8vw;
+  }
 `;
 
 export const Img = styled.img`
@@ -29,6 +32,12 @@ export const Card = styled.div`
   > p {
     font-size: 18px;
   }
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 20px 24px;
+    font-size: 16px;
+    gap: 25px;
+  }
 `;
 
 export const Buttons = styled.div`
@@ -47,6 +56,11 @@ export const Button = styled(Link)`
   border-radius: 20px;
   font-size: 18px;
   font-family: "ConsB", sans-serif;
+
+  @media (max-width: 768px) {
+    padding: 8px 20px;
+    font-size: 16px;
+  }
 
   &:hover {
     filter: brightness(0.6);

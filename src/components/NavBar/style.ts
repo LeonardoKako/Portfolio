@@ -164,7 +164,7 @@ export const NavMobile = styled.ul<{ isOpen: boolean }>`
   width: 100%;
   height: 88vh;
   top: 13vh;
-  left: 0px;
+  left: 0;
   background-color: ${colors.bg};
   z-index: 99;
   display: flex;
@@ -172,13 +172,6 @@ export const NavMobile = styled.ul<{ isOpen: boolean }>`
   justify-content: start;
   align-items: center;
   gap: 25px;
-
-  /* Animação */
-  opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};
-  transform: ${({ isOpen }) =>
-    isOpen ? "translateY(0)" : "translateY(-10px)"};
-  pointer-events: ${({ isOpen }) => (isOpen ? "auto" : "none")};
-  transition: opacity 0.3s ease, transform 0.3s ease;
 
   ${Navlinks}, ${DownloadLink} {
     font-size: 28px;
