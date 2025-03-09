@@ -163,7 +163,7 @@ export const NavMobile = styled.ul<{ isOpen: boolean }>`
   position: fixed;
   width: 100%;
   height: 88vh;
-  top: 12vh;
+  top: 13vh;
   left: 0px;
   background-color: ${colors.bg};
   z-index: 99;
@@ -181,10 +181,14 @@ export const NavMobile = styled.ul<{ isOpen: boolean }>`
   transition: opacity 0.3s ease, transform 0.3s ease;
 
   ${Navlinks}, ${DownloadLink} {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   @media (min-width: 769px) {
     display: none;
+  }
+
+  @media (max-width: 400px) {
+    top: 20vh;
   }
 `;
