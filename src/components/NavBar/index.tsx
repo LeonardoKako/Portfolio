@@ -109,7 +109,7 @@ const NavBar = () => {
           </Navlinks>
           <DownloadLink
             onClick={() => {
-              downloadPDF;
+              downloadPDF();
               setIsOpen(false);
             }}
           >
