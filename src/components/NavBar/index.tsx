@@ -1,5 +1,15 @@
-import { useContext } from "react";
-import { DownloadLink, Language, Name, Nav, Navlink } from "./style";
+import { useContext, useEffect, useState } from "react";
+import {
+  DownloadLink,
+  Language,
+  MenuHamburguer,
+  NameDesktop,
+  NameMobile,
+  Nav,
+  NavDesktop,
+  Navlinks,
+  NavMobile,
+} from "./style";
 import { SetLanguage } from "../../context/SetLanguage";
 
 const translations = {
@@ -34,21 +44,62 @@ const NavBar = () => {
     document.body.removeChild(link);
   };
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+      window.scrollTo(0, 0);
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
+
   return (
-    <Nav>
-      <Name to="/">Leonardo Fleith</Name>
-      <ul>
-        <Navlink to="/about">{translations.about[lang]}</Navlink>
-        <Navlink to="/projects">{translations.projects[lang]}</Navlink>
-        <Navlink to="/abilities">{translations.abilities[lang]}</Navlink>
-        <Navlink to="/contact">{translations.contact[lang]}</Navlink>
+    <Nav className={isOpen ? "fixed" : ""}>
+      <NameMobile to="/" className="mobile-name">
+        Leonardo
+        <br />
+        Fleith
+      </NameMobile>
+      <NameDesktop to="/" className="desktop-name">
+        Leonardo Fleith
+      </NameDesktop>
+      <MenuHamburguer
+        className={isOpen ? "active" : ""}
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <div />
+        <div />
+        <div />
+      </MenuHamburguer>
+      <NavDesktop>
+        <Navlinks to="/about">{translations.about[lang]}</Navlinks>
+        <Navlinks to="/projects">{translations.projects[lang]}</Navlinks>
+        <Navlinks to="/abilities">{translations.abilities[lang]}</Navlinks>
+        <Navlinks to="/contact">{translations.contact[lang]}</Navlinks>
         <DownloadLink onClick={downloadPDF}>
           {translations.education[lang]}
         </DownloadLink>
-      </ul>
+      </NavDesktop>
       <Language onClick={() => setEnglish(!english)}>
         {translations.language[lang]}
       </Language>
+      {isOpen && (
+        <NavMobile isOpen={isOpen}>
+          <Navlinks to="/about">{translations.about[lang]}</Navlinks>
+          <Navlinks to="/projects">{translations.projects[lang]}</Navlinks>
+          <Navlinks to="/abilities">{translations.abilities[lang]}</Navlinks>
+          <Navlinks to="/contact">{translations.contact[lang]}</Navlinks>
+          <DownloadLink onClick={downloadPDF}>
+            {translations.education[lang]}
+          </DownloadLink>
+        </NavMobile>
+      )}
     </Nav>
   );
 };

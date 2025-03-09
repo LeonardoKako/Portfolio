@@ -13,9 +13,9 @@ const translations = {
     pt: "Você pode me contatar via E-mail, Whatsapp ou Linkedin. Geralmente respondo em um dia.",
     en: "You can contact me via Email, Whatsapp or Linkedin. I usually respond within a day.",
   },
-  email: { pt: "E-mail", en: "Email" },
+  email: { pt: "Email", en: "Email" },
   whatsapp: { pt: "Whatsapp", en: "Whatsapp" },
-  linkedin: { pt: "Linkedin", en: "LinkedIn" },
+  linkedin: { pt: "Linkedin", en: "Linkedin" },
   alert: { pt: "Email copiado!", en: "Email copied! " },
 };
 

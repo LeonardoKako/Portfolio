@@ -8,8 +8,8 @@ const translations = {
     en: "© 2025 Leonardo Fleith | All rights reserved.",
   },
   github: {
-    pt: "Confira mais projetos no meu",
-    en: "Check out more projects on my",
+    pt: "Confira mais projetos no meu ",
+    en: "Check out more projects on my ",
   },
 };
 
@@ -33,9 +33,8 @@ const Footer = () => {
             window.open("https://github.com/LeonardoKako", "_blank")
           }
         >
-          Github
+          Github.
         </span>
-        .
       </p>
     </Container>
   );
