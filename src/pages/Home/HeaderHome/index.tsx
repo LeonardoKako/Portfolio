@@ -24,8 +24,8 @@ const HeaderHome = () => {
       </div>
       <Desc>
         {english
-          ? "Front-End Developer for 4 years, aspiring Full Stack. A proactive professional always seeking new challenges."
-          : "Desenvolvedor Front-End há 4 anos, aspirante a Full Stack. Profissional com perfil proativo e sempre em busca de novos desafios."}
+          ? "Front-End Developer for 3 years, aspiring Full Stack. A proactive professional always seeking new challenges."
+          : "Desenvolvedor Front-End há 3 anos, aspirante a Full Stack. Profissional com perfil proativo e sempre em busca de novos desafios."}
       </Desc>
 
       <Tags>
