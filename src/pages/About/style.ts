@@ -21,17 +21,17 @@ export const AboutPage = styled.section`
 
     img {
       width: 25vw;
-      height: 25vw;
+      height: 30vw;
       border-radius: 50%;
 
       @media (min-width: 769px) and (max-width: 1024px) {
         width: 40vw;
-        height: 40vw;
+        height: 50vw;
       }
 
       @media (max-width: 768px) {
         width: 50vw;
-        height: 50vw;
+        height: 60vw;
         margin-bottom: 20px;
       }
     }
