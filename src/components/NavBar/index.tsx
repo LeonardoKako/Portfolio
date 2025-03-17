@@ -19,8 +19,8 @@ const translations = {
   abilities: { pt: "Habilidades", en: "Skills" },
   contact: { pt: "Contato", en: "Contact" },
   cv: {
-    pt: "../../../CV-Português.pdf",
-    en: "../../../CV-English.pdf",
+    pt: "../../../CV_Portugues.pdf",
+    en: "../../../CV_English.pdf",
   },
   language: { pt: "English", en: "Português" },
 };

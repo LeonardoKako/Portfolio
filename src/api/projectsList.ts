@@ -180,8 +180,8 @@ export const projectsList = [
   },
   {
     id: 7,
-    name: "EBAC Games",
-    nameEng: "EBAC Games",
+    name: "Eplay",
+    nameEng: "Eplay",
     subtitle: "Ecommerce de uma loja de Games",
     subtitleEng: "E-commerce for a game store",
     img: eplay,

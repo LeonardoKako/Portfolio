@@ -29,7 +29,10 @@ const Project = ({ idProject }: Props) => {
   return (
     <Card
       img={project.imgMd}
-      onClick={() => navigate(`/projects/${project.id}`)}
+      onClick={() => {
+        navigate(`/projects/${project.id}`)
+        window.scrollTo({ top: 0, behavior: "smooth" })}
+      }
     >
       <ShadowBlack />
       <ShadowWhite />
