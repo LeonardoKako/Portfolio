@@ -51,6 +51,10 @@ export const Card = styled.div<Props>`
   h1 {
     font-size: 22px;
     margin-bottom: 15px;
+
+    @media (max-width: 400px) {
+      margin-bottom: 5px;
+    }
   }
 
   > p {

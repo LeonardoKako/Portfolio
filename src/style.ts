@@ -90,6 +90,11 @@ export const Tags = styled.ul`
   @media (max-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  @media (max-width: 400px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
 `;
 
 export const TagsProjectSolo = styled.ul`
