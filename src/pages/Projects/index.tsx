@@ -15,14 +15,16 @@ const Projects = () => {
   return (
     <ProjectsPage>
       <Title>{english ? "Main projects: " : "Principais projetos:"}</Title>
-      <ul className="mt40 gap40">
+      <ul className='mt40 gap40'>
+        <Project idProject={9} />
+        <Project idProject={8} />
         <Project idProject={0} />
-        <Project idProject={1} />
-        <Project idProject={7} />
       </ul>
       <Title>{english ? "Other smalls projects: " : "Projetos menores:"}</Title>
-      <ul className="mt40 gap40">
+      <ul className='mt40 gap40'>
         <Project idProject={2} />
+        <Project idProject={1} />
+        <Project idProject={7} />
         <Project idProject={3} />
         <Project idProject={4} />
         <Project idProject={6} />

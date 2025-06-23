@@ -16,6 +16,8 @@ import disneyplusmd from "../assets/images/projects/disneymd.png";
 import todolistReactmd from "../assets/images/projects/todolistReactmd.png";
 import restaurantmd from "../assets/images/projects/restaurantmd.png";
 import eplaymd from "../assets/images/projects/eplaymd.png";
+import chronos from "../assets/images/projects/chronosPomodoro.png";
+import theblog from "../assets/images/projects/theblog.png";
 
 // ICONS
 import html from "../assets/images/icons/html.svg";
@@ -32,6 +34,10 @@ import firebase from "../assets/images/icons/firebase.svg";
 import gulp from "../assets/images/icons/gulp.svg";
 import sass from "../assets/images/icons/sass.svg";
 import vue from "../assets/images/icons/vue.svg";
+import next from "../assets/images/icons/next.svg";
+import drizzle from "../assets/images/icons/drizzle.png";
+import tailwind from "../assets/images/icons/tailwind-css.svg";
+import vite from "../assets/images/icons/vite.svg";
 
 export const projectsList = [
   {
@@ -199,5 +205,48 @@ export const projectsList = [
       "E-commerce for a game store, developed with React and TypeScript. It includes a cart system, category filters, and integration with an API for product listing. The design was created in Figma and styled with Styled Components.",
     site: "https://eplay-leofleith.vercel.app/",
     github: "https://github.com/LeonardoKako/ecommerce-eplay",
+  },
+  {
+    id: 8,
+    name: "Chronos Pomodoro",
+    nameEng: "Chronos Pomodoro",
+    subtitle: "Gerenciador de foco com técnica Pomodoro",
+    subtitleEng: "Focus manager using Pomodoro technique",
+    img: chronos,
+    imgMd: chronos,
+    tags: [
+      { tagName: "React", imgTag: react },
+      { tagName: "TypeScript", imgTag: ts },
+      { tagName: "CSS", imgTag: css },
+      { tagName: "Vite", imgTag: vite },
+      { tagName: "Figma", imgTag: figma },
+    ],
+    desc: "Aplicativo que segue a técnica do Pomodoro para aumentar o foco e a produtividade. Desenvolvido com React 19, TypeScript e CSS Modules, permite configurar tempos personalizados de foco e descanso, com dados armazenados no localStorage. Utiliza bibliotecas como date-fns, react-toastify e lucide.",
+    descEng:
+      "A Pomodoro-based productivity app built with React 19, TypeScript, and CSS Modules. Allows users to customize focus and break durations, with data saved in localStorage. Libraries like date-fns, react-toastify, and lucide are also used.",
+    site: "https://chronos-leonardo.vercel.app/",
+    github: "https://github.com/LeonardoKako/chronos-pomodoro",
+  },
+  {
+    id: 9,
+    name: "The blog",
+    nameEng: "The blog",
+    subtitle: "Blog com autenticação e gerenciamento de postagens",
+    subtitleEng: "Blog with authentication and post management",
+    img: theblog,
+    imgMd: theblog,
+    tags: [
+      { tagName: "Next", imgTag: next },
+      { tagName: "TypeScript", imgTag: ts },
+      { tagName: "Tailwind", imgTag: tailwind },
+      { tagName: "Drizzle", imgTag: drizzle },
+      { tagName: "Vite", imgTag: vite },
+      { tagName: "Figma", imgTag: figma },
+    ],
+    desc: "Usando Next.js, TypeScript e Tailwind, este blog permite autenticação de usuários e criação de postagens. A aplicação utiliza Drizzle para o banco de dados, validação com Zod, UUID, React Toastify e suporte a Markdown. O sistema de autenticação usa JWT via cookies e senha criptografada com base64.",
+    descEng:
+      "Built with Next.js, TypeScript, and Tailwind, this blog app supports user authentication and post creation. It uses Drizzle for the database, Zod for validation, UUIDs, React Toastify, and React Markdown. Authentication is handled with JWT cookies and base64-encrypted passwords.",
+    site: "https://www.loom.com/share/71950973e3c34a519156d6bdf3e5612a?sid=98cbbd7a-8623-4d8e-a835-5ef32a864d6e",
+    github: "https://github.com/LeonardoKako/the-blog-nextjs",
   },
 ];

@@ -15,15 +15,15 @@ const MyProjects = () => {
   return (
     <section>
       <Title>{english ? "Projects: " : "Projetos: "}</Title>
-      <ul className="mt40 gap40">
+      <ul className='mt40 gap40'>
+        <Project idProject={9} />
+        <Project idProject={8} />
         <Project idProject={0} />
-        <Project idProject={1} />
-        <Project idProject={7} />
         <LinkItem
           onClick={() => {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
-          to="/projects"
+          to='/projects'
         >
           {english ? "More projects..." : "Mais projetos... "}
         </LinkItem>
