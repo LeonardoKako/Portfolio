@@ -19,13 +19,13 @@ const HeaderHome = () => {
     <Header>
       <Title>Leonardo Fleith</Title>
       <div>
-        <img src={location} alt="Location" />
+        <img src={location} alt='Location' />
         <SubTitle>Florianópolis, Brasil</SubTitle>
       </div>
       <Desc>
         {english
-          ? "Front-End Developer for 3 years, aspiring Full Stack. A proactive professional always seeking new challenges."
-          : "Desenvolvedor Front-End há 3 anos, aspirante a Full Stack. Profissional com perfil proativo e sempre em busca de novos desafios."}
+          ? "Fullstack Developer. A proactive professional always seeking new challenges."
+          : "Desenvolvedor Fullstack. Profissional com perfil proativo e sempre em busca de novos desafios."}
       </Desc>
 
       <Tags>
@@ -37,21 +37,21 @@ const HeaderHome = () => {
             )
           }
         >
-          <img src={linkedin} alt="Linkedin" />
+          <img src={linkedin} alt='Linkedin' />
         </div>
         <div
           onClick={() =>
             window.open("https://github.com/LeonardoKako", "_blank")
           }
         >
-          <img src={github} alt="Github" />
+          <img src={github} alt='Github' />
         </div>
         <div
           onClick={() =>
             window.open("https://www.instagram.com/kako.fleith/", "_blank")
           }
         >
-          <img src={instagram} alt="Instagram" />
+          <img src={instagram} alt='Instagram' />
         </div>
       </Tags>
     </Header>

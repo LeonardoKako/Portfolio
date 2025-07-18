@@ -15,7 +15,7 @@ const About = () => {
   return (
     <AboutPage>
       <div>
-        <img src={leoImg} alt="Eu, Leonardo" />
+        <img src={leoImg} alt='Eu, Leonardo' />
       </div>
       <Title>{english ? "About me" : "Sobre mim"}</Title>
       {english ? (
@@ -23,12 +23,12 @@ const About = () => {
           <p>
             I am a student of Systems Analysis and Development at CESUSC and a
             Front-End Developer in training at EBAC, with a strong interest in
-            programming and interface design. Currently, I am in my first year
-            of college and have already completed a technical course in Systems
-            Development at Senai. I consider myself a calm, intelligent, and
-            dedicated person, always eager to learn and adapt to new challenges.
-            My goal is to join a creative and innovative team, contributing to
-            the development of impactful digital projects.
+            Fullstack programming, I am in my second year of college and have
+            already completed a technical course in Systems Development at
+            Senai. I consider myself a calm, intelligent, and dedicated person,
+            always eager to learn and adapt to new challenges. My goal is to
+            join a creative and innovative team, contributing to the development
+            of impactful digital projects.
           </p>
           <p>
             In addition to programming, I have experience in Graphic Design,
@@ -55,13 +55,13 @@ const About = () => {
           <p>
             Sou estudante de Análise e Desenvolvimento de Sistemas na CESUSC e
             Desenvolvedor Front-End em formação pela EBAC, com um forte
-            interesse em programação e design de interfaces. Atualmente, estou
-            no primeiro ano da graduação e já concluí um curso técnico em
-            Desenvolvimento de Sistemas pelo Senai. Considero-me uma pessoa
-            calma, inteligente e dedicada, sempre disposta a aprender e me
-            adaptar a novos desafios. Meu objetivo é integrar uma equipe
-            criativa e inovadora, contribuindo para o desenvolvimento de
-            projetos digitais de alto impacto.
+            interesse na programação Fullstack. Atualmente, estou na terceira
+            fase da graduação e já concluí um curso técnico em Desenvolvimento
+            de Sistemas pelo Senai. Considero-me uma pessoa calma, inteligente e
+            dedicada, sempre disposta a aprender e me adaptar a novos desafios.
+            Meu objetivo é integrar uma equipe criativa e inovadora,
+            contribuindo para o desenvolvimento de projetos digitais de alto
+            impacto.
           </p>
           <p>
             Além da programação, possuo experiência em Design Gráfico, o que me
